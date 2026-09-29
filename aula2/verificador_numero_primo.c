@@ -1,1 +1,34 @@
+#include <stdio.h>
 
+int main () {
+    //Verificador de numero primo
+
+    int numero;
+    int primo = 1;
+
+    printf("Digite um numero inteiro positivo: ");
+    scanf("%d", &numero);
+
+    if (numero < 2) {
+        primo = 0;
+    }
+
+    else {
+        for (int i = 2; i < numero; i++) {
+            if (numero % i == 0) {
+                primo = 0;
+                break;
+            }
+        }
+    }
+
+    if (primo) {
+        printf("O numero %d e primo.\n", numero);
+    }
+
+    else {
+        printf("O numero %d nao e primo.\n", numero);
+    }
+
+    return 0;
+}
