@@ -1,23 +1,11 @@
-#include <stdio.h> 
-int main() { 
-  int horas; 
-  float valorHora, salarioBruto, previdencia, impostoRenda, salarioLiquido; 
-  
-  printf("Digite a quantidade de horas trabalhadas: "); 
-  scanf("%d", &horas); 
-  
-  printf("Digite o valor da hora trabalhada: R$ "); 
-  scanf("%f", &valorHora); 
-  
-  salarioBruto = horas * valorHora; 
-  previdencia = salarioBruto * 0.11; 
-  impostoRenda = salarioBruto * 0.05; 
-  salarioLiquido = salarioBruto - previdencia - impostoRenda; 
-  
-  printf("Salario bruto: R$ %.2f\n", salarioBruto); 
-  printf("Desconto previdenciario (11%%): R$ %.2f\n", previdencia); 
-  printf("Imposto de renda (5%%): R$ %.2f\n", impostoRenda); 
-  printf("Salario liquido: R$ %.2f\n", salarioLiquido); 
-  
-  return 0; 
+#include <stdio.h>
+int main() {
+float celsius, fahrenheit, kelvin;
+printf("Digite a temperatura em Celsius: ");
+scanf("%f", &celsius);
+fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
+kelvin = celsius + 273.15;
+printf("Temperatura em Fahrenheit: %.2f\n", fahrenheit);
+printf("Temperatura em Kelvin: %.2f\n", kelvin);
+return 0;
 }
